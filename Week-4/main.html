@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Main Page - HTML5 Version</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Top row: homepage */
+  .top {
+    height: 30%;
+    border-bottom: 2px solid #ccc;
+  }
+
+  /* Bottom row split into left & right */
+  .bottom {
+    flex: 1;
+    display: flex;
+  }
+
+  .left {
+    width: 25%;
+    border-right: 2px solid #ccc;
+  }
+
+  .right {
+    flex: 1;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 368px) {
+    .bottom {
+      flex-direction: column;
+    }
+    .left {
+      width: 100%;
+      height: auto;
+      border-right: none;
+      border-bottom: 2px solid #ccc;
+    }
+    .right {
+      height: 65%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Top row -->
+<div class="top">
+  <iframe src="homepage.html"></iframe>
+</div>
+
+<!-- Bottom row -->
+<div class="bottom">
+  <div class="left">
+    <iframe src="left.html"></iframe>
+  </div>
+  <div class="right">
+    <iframe src="right.html" name="empty"></iframe>
+  </div>
+</div>
+
+</body>
+</html>
